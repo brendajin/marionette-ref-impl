@@ -22,3 +22,7 @@
 * [More detailed changelog for v2.0](https://github.com/MarionetteLabs/marionette-changelog-detail)
 * [Plan for v3.0](https://github.com/marionettejs/backbone.marionette/issues/1796)
 * [Status for v3.0](https://github.com/marionettejs/backbone.marionette/issues?q=is%3Aissue+milestone%3Av3.0.0)
+
+## Reference Implementations
+* [Marionette wires](https://github.com/thejameskyle/marionette-wires)
+* [Gistbook](https://github.com/jmeas/gistbook) - live at [https://www.gistbook.io/](https://www.gistbook.io/)
