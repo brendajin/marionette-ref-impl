@@ -13,6 +13,12 @@
 * Shell of Marionette implemented - Tiago
 * Scaffold project like MacysUI - Tiago
 
-## Links
+## Marionette docs
+* [Current official docs](http://marionettejs.com/docs/current)
+* [Upcoming official docs](http://dev.marionettejs.com/docs/current)
+
+## Marionette Changelog
 * [Changelog](https://github.com/marionettejs/backbone.marionette/releases) - great place to learn what is new since v2.0
 * [More detailed changelog for v2.0](https://github.com/MarionetteLabs/marionette-changelog-detail)
+* [Plan for v3.0](https://github.com/marionettejs/backbone.marionette/issues/1796)
+* [Status for v3.0](https://github.com/marionettejs/backbone.marionette/issues?q=is%3Aissue+milestone%3Av3.0.0)
