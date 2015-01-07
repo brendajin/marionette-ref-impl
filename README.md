@@ -12,3 +12,7 @@
 * Set up Node server with JSON service and fake data with web.js file and products.json and facets.json - Brenda
 * Shell of Marionette implemented - Tiago
 * Scaffold project like MacysUI - Tiago
+
+## Links
+* [Changelog](https://github.com/marionettejs/backbone.marionette/releases) - great place to learn what is new since v2.0
+* [More detailed changelog for v2.0](https://github.com/MarionetteLabs/marionette-changelog-detail)
