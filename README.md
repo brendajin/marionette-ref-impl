@@ -13,6 +13,10 @@
 * Shell of Marionette implemented - Tiago
 * Scaffold project like MacysUI - Tiago
 
+## Utils/Components to use
+* Globals ( set a Global from the server, use it from the client ) - stateful
+* StringUtil - stateless
+
 ## Marionette docs
 * [Current official docs](http://marionettejs.com/docs/current)
 * [Upcoming official docs](http://dev.marionettejs.com/docs/current)

@@ -1,0 +1,16 @@
+{
+  "name": "macysdotcom-reference-implementation",
+  "version": "0.0.1",
+  "engines": {
+    "node": "1.*",
+    "npm": "1.*"
+  },
+  "dependencies": {
+    "express": "*",
+    "body-parser": "~1.9.3"
+  },
+  "devDependencies": {
+    "grunt-jsbeautifier": "~0.2.2",
+    "grunt-docco": "~0.2.0"
+  }
+}
