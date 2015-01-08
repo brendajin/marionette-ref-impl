@@ -1,4 +1,4 @@
-# MacysUI Architecture reference implementation for Macys.com
+# UI Architecture reference implementation for Macys.com
 
 ## Guidelines
 * Simple enough to understand, but complex enough to illustrate architecture
