@@ -1,0 +1,25 @@
+{
+  "name": "marionette-ref-impl",
+  "version": "0.0.1",
+  "homepage": "https://github.com/brendajin/marionette-ref-impl",
+  "authors": [
+    "Brenda Jin <brenda.jin@macys.com>",
+    "Tiago Garcia <tiago.garcia@macys.com>",
+    "Angelo Calub <angelo.calub@macys.com>"
+  ],
+  "moduleType": [
+    "amd"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "src/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "handlebars": "~2.0.0",
+    "marionette": "~2.3.0",
+    "requirejs": "~2.1.15"
+  }
+}

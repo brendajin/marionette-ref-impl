@@ -1,5 +1,5 @@
 var https = require('https'),
-	express = require('express'),
+	  express = require('express'),
     app = express(),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 2500;
@@ -14,7 +14,7 @@ app.get(['/json/*'], function( req, res ) {
 	res.json( req.body );
 });
 
-app.get(['/*', '/#*'], express.static(__dirname + '/public'));
+app.get(['/*', '/#*'], express.static(__dirname + '/src'));
 
 app.listen(port);
 console.log("Listening on port " + port);

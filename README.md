@@ -22,3 +22,16 @@
 ## Reference Implementations
 * [Marionette wires](https://github.com/thejameskyle/marionette-wires)
 * [Gistbook](https://github.com/jmeas/gistbook) - live at [https://www.gistbook.io/](https://www.gistbook.io/)
+
+## Setup
+* Macy's network will block npm and bower when trying to download from ```git://``` so just run this trick one in your terminal and it will replace such references for ```https://``` and then npm and bower should work fine.
+```
+git config --global url."https://".insteadOf git://
+```
+* Follow these steps:
+```
+npm install
+bower install
+```
+* In order to run: ```npm start``
+* In order to test: ```npm test``` (coming soon)
