@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/brendajin/marionette-ref-impl.svg?branch=master)](https://travis-ci.org/brendajin/marionette-ref-impl)
+
 # UI Architecture reference implementation for Macys.com
 
 ## Guidelines
@@ -12,6 +14,7 @@
 ## Marionette docs
 * [Current official docs](http://marionettejs.com/docs/current)
 * [Upcoming official docs](http://dev.marionettejs.com/docs/current)
+* [Backbone.Radio](http://blog.marionettejs.com/2014/07/11/introducing-backbone-radio/)
 
 ## Marionette Changelog
 * [Changelog](https://github.com/marionettejs/backbone.marionette/releases) - great place to learn what is new since v2.0
@@ -31,7 +34,9 @@ git config --global url."https://".insteadOf git://
 * Follow these steps:
 ```
 npm install
+npm install -g bower
 bower install
+npm install -g jasmine
 ```
-* In order to run: ```npm start``
-* In order to test: ```npm test``` (coming soon)
+* In order to run: ```npm start```
+* In order to test: ```npm test```

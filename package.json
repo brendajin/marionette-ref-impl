@@ -2,7 +2,8 @@
   "name": "macysdotcom-reference-implementation",
   "version": "0.0.1",
   "scripts": {
-    "start": "node web.js"
+    "start": "node web.js",
+    "test": "jasmine"
   },
   "homepage": "https://github.com/brendajin/marionette-ref-impl",
   "authors": [
@@ -21,6 +22,7 @@
   "devDependencies": {
     "bower": "^1.3.12",
     "grunt-docco": "~0.2.0",
-    "grunt-jsbeautifier": "~0.2.2"
+    "grunt-jsbeautifier": "~0.2.2",
+    "jasmine": "^2.1.1"
   }
 }
