@@ -17,7 +17,7 @@
         // scripts
         base: '/scripts/base',
         components: '/scripts/components',
-        features: '/scripts/features',
+        features: '/scripts/features'
 
     };
 
@@ -37,7 +37,6 @@
 
     // set up require
     require.config( {
-        baseUrl: '/src',
         paths: paths,
         shim: shims
     } );
