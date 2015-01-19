@@ -18,7 +18,6 @@ var paths = {
     marionette: '/base/src/vendor/marionette/lib/backbone.marionette',
     handlebars: '/base/src/vendor/script/handlebars/handlebars.amd',
     jquery: '/base/src/vendor/jquery/dist/jquery',
-    require: '/base/src/vendor/requirejs/require',
     underscore: '/base/src/vendor/underscore/underscore',
 
     // handlebar templates base location
@@ -59,3 +58,5 @@ require.config({
   // we have to kickoff jasmine, as it is asynchronous
   callback: window.__karma__.start
 });
+
+jasmine.getFixtures().fixturesPath = 'base/test/fixtures';

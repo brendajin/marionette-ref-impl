@@ -15,17 +15,20 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
+      'node_modules/jasmine-jquery/vendor/jquery/jquery.js',
+      'node_modules/jasmine-jquery/lib/jasmine-jquery.js',
+      'test/fixtures/**.html',
       {pattern: 'src/**/*.js', included: false},
-      {pattern: 'test/**/*.spec.js', included: false},
+      {pattern: 'test/spec/**', included: false},
       'test/test-main.js'
     ],
 
-
     // list of files to exclude
     exclude: [
-      'src/vendor/**/*.spec.js'
+      'src/vendor/**/*.min.js',
+      'src/vendor/**/src/**/*.js',
+      'src/vendor/**/spec/**/*.js',
     ],
-
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor

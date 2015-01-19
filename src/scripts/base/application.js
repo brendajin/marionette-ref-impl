@@ -3,16 +3,20 @@
 //> Create Date: Jan 9, 2015
 //
 //##DESCRIPTION: The Marionette application
-define( [ 'jquery', 'underscore', 'backbone', 'marionette' ], function ( $, _, Backbone, Marionette ) {
+define( [ 'jquery', 'underscore', 'backbone', 'marionette', 'base/rootView', 'base/headerView', 'base/sidebarView', 'base/contentView' ], function ( $, _, Backbone, Marionette, RootView, HeaderView, SidebarView, ContentView ) {
 
     'use strict';
 
     var Application = Marionette.Application.extend( {
-        initialize: function(options) {
-            if ( Backbone.history ) {
-                Backbone.history.start();
-                console.log( 'Backbone.history has been started' );
-            }
+        initialize: function( options ) {
+            this.rootView = new RootView( );
+            this.rootView.render();
+
+            this.rootView.getRegion( 'header' ).show( new HeaderView( ) );
+            this.rootView.getRegion( 'sidebar' ).show( new SidebarView( ) );
+            this.rootView.getRegion( 'content' ).show( new ContentView( ) );
+
+            Backbone.history && Backbone.history.start();
         }
     } );
 
