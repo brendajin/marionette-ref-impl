@@ -42,9 +42,7 @@
     } );
 
     require( [ 'base/application' ], function ( Application ) {
-        new Application( {
-            container: '#application'
-        } );
+        new Application();
     } );
 
 } )();
