@@ -38,11 +38,10 @@ module.exports = function ( grunt ) {
         },
         jshint: {
             all: {
-                src: [ 'src/scripts/**.js' ]
+                src: [ 'src/scripts/**/*.js' ]
             },
             options: {
-                "jshintrc": "config/jshint.json",
-                "extensions": "js"
+                "jshintrc": "config/jshint.json"
             }
         },
         clean: {

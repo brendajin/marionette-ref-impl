@@ -16,7 +16,7 @@ define( [ 'jquery', 'underscore', 'backbone', 'marionette', 'base/rootView', 'ba
             this.rootView.getRegion( 'sidebar' ).show( new SidebarView() );
             this.rootView.getRegion( 'content' ).show( new ContentView() );
 
-            Backbone.history && Backbone.history.start();
+            Backbone.history.start();
         }
     } );
 

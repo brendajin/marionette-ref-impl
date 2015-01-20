@@ -42,7 +42,7 @@
     } );
 
     require( [ 'base/application' ], function ( Application ) {
-        new Application();
+        var app = new Application();
     } );
 
 } )();
