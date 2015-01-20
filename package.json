@@ -4,7 +4,7 @@
   "scripts": {
     "start": "node web.js",
     "test": "./node_modules/karma/bin/karma start --single-run --browsers PhantomJS",
-    "postinstall": "./node_modules/grunt-cli/grunt postInstall"
+    "postinstall": "./node_modules/grunt-cli/bin/grunt postInstall"
   },
   "homepage": "https://github.com/brendajin/marionette-ref-impl",
   "authors": [
