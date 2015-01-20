@@ -8,7 +8,7 @@ define( [ 'jquery', 'underscore', 'backbone', 'marionette' ], function ( $, _, B
     'use strict';
 
     var SidebarView = Marionette.ItemView.extend( {
-      template: false
+        template: false
     } );
 
     return SidebarView;

@@ -41,7 +41,7 @@
         shim: shims
     } );
 
-    require( [ 'base/application' ], function( Application ) {
+    require( [ 'base/application' ], function ( Application ) {
         new Application( {
             container: '#application'
         } );

@@ -1,0 +1,15 @@
+#!/bin/sh
+#
+# Pre-commit hooks
+FILES=`git diff --cached --name-only --diff-filter=ACM`
+OTHER_FILES=`git diff --name-only`
+for F in $FILES; do
+    for J in $OTHER_FILES; do
+        if [ "$J" == "$F" ]; then
+            echo "It looks like file $F has not been beautified but you are attempting to commit it!"
+            exit -1
+        fi
+    done
+done
+# Lint stuff before commiting
+grunt --beautified="$FILES" preCommit

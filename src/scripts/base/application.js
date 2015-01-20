@@ -8,13 +8,13 @@ define( [ 'jquery', 'underscore', 'backbone', 'marionette', 'base/rootView', 'ba
     'use strict';
 
     var Application = Marionette.Application.extend( {
-        initialize: function( options ) {
-            this.rootView = new RootView( );
+        initialize: function ( options ) {
+            this.rootView = new RootView();
             this.rootView.render();
 
-            this.rootView.getRegion( 'header' ).show( new HeaderView( ) );
-            this.rootView.getRegion( 'sidebar' ).show( new SidebarView( ) );
-            this.rootView.getRegion( 'content' ).show( new ContentView( ) );
+            this.rootView.getRegion( 'header' ).show( new HeaderView() );
+            this.rootView.getRegion( 'sidebar' ).show( new SidebarView() );
+            this.rootView.getRegion( 'content' ).show( new ContentView() );
 
             Backbone.history && Backbone.history.start();
         }
