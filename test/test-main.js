@@ -16,7 +16,7 @@ var paths = {
     // third party libraries
     backbone: '/base/src/vendor/backbone/backbone',
     marionette: '/base/src/vendor/marionette/lib/backbone.marionette',
-    handlebars: '/base/src/vendor/handlebars/handlebars.amd',
+    handlebars: '/base/src/vendor/handlebars/handlebars',
     jquery: '/base/src/vendor/jquery/dist/jquery',
     underscore: '/base/src/vendor/underscore/underscore',
 
@@ -42,6 +42,9 @@ var shims = {
     },
     underscore: {
         exports: '_'
+    },
+    handlebars: {
+        exports: 'Handlebars'
     }
 };
 

@@ -6,7 +6,7 @@
         // third party libraries
         backbone: '/vendor/backbone/backbone',
         marionette: '/vendor/marionette/lib/backbone.marionette',
-        handlebars: '/vendor/handlebars/handlebars.amd',
+        handlebars: '/vendor/handlebars/handlebars',
         jquery: '/vendor/jquery/dist/jquery',
         require: '/vendor/requirejs/require',
         underscore: '/vendor/underscore/underscore',
@@ -32,6 +32,9 @@
         },
         underscore: {
             exports: '_'
+        },
+        handlebars: {
+            exports: 'Handlebars'
         }
     };
 
