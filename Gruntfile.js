@@ -112,6 +112,8 @@ module.exports = function ( grunt ) {
     grunt.loadNpmTasks( 'grunt-contrib-copy' );
     grunt.loadNpmTasks( 'grunt-contrib-handlebars' );
 
+    grunt.registerTask( 'default', [ 'handlebars' ] );
+
     // Post npm install task, to setup the pre-commit hook
     grunt.registerTask(
         'postInstall', [

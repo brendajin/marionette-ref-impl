@@ -1,21 +1,136 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Reference Implementation for Macys.com</title>
+    <title>Reference Implementation for Macys.com</title>
 
-  <link rel="stylesheet" href="/bundle.css">
-</head>
-<body>
-  <section id="globalLayout">
-    <header id="header"></header>
-    <aside id="sidebar"></aside>
-    <section id="content"></section>
-  </section>
+    <link rel="stylesheet" href="/styles/macys-base.css">
+    <link rel="stylesheet" href="/styles/bundle.css">
+  </head>
+  <body>
+    <section id="globalLayout">
+      <header id="header">
+        <header id="globalMastheadContainer">
+          <nav id="topnav">
+            <ul>
+              <li><a id="globalMastheadUserSalutation"></a></li>
+              <li class="user"><a id="globalMastheadSignIn" class="selected" target="_top" href="https://www.macys.com/signin/index.ognc?cm_sp=navigation-_-top_nav-_-signin">sign in</a></li>
+              <li><a id="href_myAccountHeader" class="noTextDecoration" target="_top" href="https://www.macys.com/account/myaccount?cm_sp=navigation-_-top_nav-_-account">my account</a></li>
+              <li class="show-tablet-only">&nbsp;|&nbsp;</li>
+              <li><a id="stores" href="http://www1.macys.com/store/index.ognc?cm_sp=navigation-_-top_nav-_-stores-_-n">stores</a></li>
+              <li><a id="href_customerServiceHeader" href="http://www1.macys.com/service/index.jsp">customer service</a></li>
+              <li class="right"><div id="globalMastheadPool">
+                <div class="macysGlobalNavAdLink">
+                  <!-- Special breadcrumb for ads - FT defect #3000 -->
+                  <!-- not cat suppress start -->
+                  <a href="javascript:pop('/m/campaign/free-shipping/free-shipping-everyday','myDynaPop','scrollbars=yes,width=950,height=900')">
+                    <img src="http://assets.macys.com/navapp/dyn_img/site_ads/t5G0ki690_1148429.png" alt="Free Shipping, with $99 purchase, Free Returns, U.S. only, exclusions" width="307" height="40" border="0">
+                  </a>
+                  <!-- not cat suppress end -->
+                </div>
+              </div></li>
+            </ul>
+          </nav>
+          <div id="globalMastheadSearchMenu">
+            <div id="globalMastheadBrandLogo" class="left">
+              <a target="_top" href="http://www1.macys.com/index.ognc?cm_sp=navigation-_-top_nav-_-macys_icon"><div id="macysHomePageLogo" class="globalMastheadLogo" alt="Macy's" title="Macy's"><div id="logo"><img src="http://assets.macys.com/web20/assets/img/nav/tablet/logo.png" mtarget="/home"></div></div></a>
+            </div>
+            <div id="nav-search-box" role="search" class="left">
+              <form target="_top" name="keywordSearch" method="GET" action="http://www1.macys.com/shop/search">
+                <span id="globalSearchInputContainer"><input size="9" maxlength="72" type="text" id="globalSearchInputField" class="globalSearchInputField ui-autocomplete-input" name="keyword" value="" autocomplete="off" placeholder="Search or enter web ID" style="color: rgb(0, 0, 0);"><span role="status" aria-live="polite" class="ui-helper-hidden-accessible"></span></span>
+                <input type="submit" id="subnavSearchSubmit" value="" border="0">
+                <style type="text/css">
+                  #nav-search-box #globalSearchInputContainer,#nav-search-box input.globalSearchInputField, ul.ui-autocomplete.ui-widget-content, ul.ui-autocomplete.ui-widget-content li.ui-menu-item {
+                    width: 360px !important;
+                  }
+                </style>
+              </form>
+            </div>
+            <ul id="mainnav">
+              <li id="nav-bag" class="icon">
+                <div id="globalMastheadBag">
+                  <div id="globalMastheadBagTab" class="shadowQB"></div>
+                  <div id="globalMastheadQuickBagHeader">
+                    <div id="nav-bag-tablet"><a id="bagLink" href="http://www1.macys.com/bag/index.ognc?cm_sp=navigation-_-top_nav-_-bag" title="shopping bag"><div class="globalMastheadBagIcon"></div><span>my bag</span></a></div>
+                    <div class="badge"><a id="checkoutLink" href="http://www1.macys.com/bag/index.ognc?cm_sp=navigation-_-top_nav-_-bag"><span id="itemInfo">my bag</span><span id="itemCount"> (0)</span></a></div>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <!--Dynamic topnav variables :: <true> <true> <true>-->
+          <div id="globalMastheadCategoryMenu" role="navigation" class="macysDynFlyout">
+            <ul>
+              <li id="flexLabel_22672" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=22672&amp;cm_sp=us_hdr-_-home-_-22672_home" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">HOME</a>
+              </li>
+              <li id="flexLabel_7495" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=7495&amp;cm_sp=us_hdr-_-bed-%26-bath-_-7495_bed-%26-bath" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">BED &amp; BATH</a>
+              </li>
+              <li id="flexLabel_118" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=118&amp;cm_sp=us_hdr-_-women-_-118_women" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">WOMEN</a>
+              </li>
+              <li id="flexLabel_1" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=1&amp;cm_sp=us_hdr-_-men-_-1_men" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">MEN</a>
+              </li>
+              <li id="flexLabel_16904" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=16904&amp;cm_sp=us_hdr-_-juniors-_-16904_juniors" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">JUNIORS</a>
+              </li>
+              <li id="flexLabel_5991" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=5991&amp;cm_sp=us_hdr-_-kids-_-5991_kids" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">KIDS</a>
+              </li>
+              <li id="flexLabel_669" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=669&amp;cm_sp=us_hdr-_-beauty-_-669_beauty" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">BEAUTY</a>
+              </li>
+              <li id="flexLabel_13247" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=13247&amp;cm_sp=us_hdr-_-shoes-_-13247_shoes" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">SHOES</a>
+              </li>
+              <li id="flexLabel_26846" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=26846&amp;cm_sp=us_hdr-_-handbags-%26-accessories-_-26846_handbags-%26-accessories" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">HANDBAGS &amp; ACCESSORIES</a>
+              </li>
+              <li id="flexLabel_544" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=544&amp;cm_sp=us_hdr-_-jewelry-_-544_jewelry" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">JEWELRY</a>
+              </li>
+              <li id="flexLabel_23930" class="" style="margin-right: 9px; padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=23930&amp;cm_sp=us_hdr-_-watches-_-23930_watches" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">WATCHES</a>
+              </li>
+              <li id="flexLabel_63538" class="" style="padding-right: 5px; padding-left: 5px;">
+                <a href="/catalog/index.ognc?CategoryID=63538&amp;cm_sp=us_hdr-_-brands-_-63538_brands" style="text-transform: uppercase; padding-right: 0px; padding-left: 0px;">BRANDS</a>
+              </li>
+            </ul>
+          </div>
+          <div id="featureNav">
+            <ul class="nav nav-pills">
+              <li><a id="globalMastheadFeatureMenuWeddingRegistry" href="http://www1.macys.com/wedding-registry?cm_sp=global_nav_reg-_-wedding_registry-_-n">wedding registry</a></li>
+              <li><a id="giftCards" href="http://www1.macys.com/catalog/index.ognc?CategoryID=1405&amp;PageID=6036169698215&amp;cm_sp=global_nav_reg-_-gift_cards-_-n">gift cards</a></li>
+              <li><a id="dealsPromotionHref" href="http://www1.macys.com/shop/coupons-deals?cm_sp=navigation-_-top_nav-_-dealsandpromos">deals &amp; promotions</a></li>
+              <li><a id="wishListHref" href="https://www.macys.com/wishlist/mylist?cm_sp=navigation-_-top_nav-_-wish_list">wish list</a></li>
+              <!-- static giftGuide roll back flag from the two dynamic new Ad pools -->
+              <li>
+                <div id="giftGuide" class="globalMastheadFeatureMenuImageLink">
+                  <!-- Special breadcrumb for ads - FT defect #3000 -->
+                  <!-- not cat suppress start -->
+                  <a href="http://www1.macys.com/campaign/social?campaign_id=259&amp;channel_id=1&amp;cm_sp=navigation-_-top_nav-_-giftguide">
+                    <img src="http://assets.macys.com/navapp/dyn_img/site_ads/0528_sitewide_HP_v1_secnav_01_1094451.png" alt="the gift guide" width="87" height="33" border="0">
+                  </a>
+                  <!-- not cat suppress end -->
+                </div>
+              </li>
+              <li>
+                <div id="seasonalPromotion" class="globalMastheadFeatureMenuImageLink">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </header>
+      </header>
+      <aside id="sidebar"></aside>
+      <section id="content"></section>
+    </section>
 
-  <script data-main="/scripts/base/requireConfig.js" src="/vendor/requirejs/require.js"></script>
-</body>
-</html>
+    <script data-main="/scripts/base/requireConfig.js" src="/vendor/requirejs/require.js"></script>
+  </body>
+  </html>
