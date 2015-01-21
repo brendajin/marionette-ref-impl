@@ -19,6 +19,7 @@ app.get( [ '/api/*' ], function ( req, res ) {
     res.send( json );
 } );
 
+app.get( [ '/templates/*' ], express.static( __dirname + '/target' ) );
 app.get( [ '/*', '/#*' ], express.static( __dirname + '/src' ) );
 
 app.listen( port );

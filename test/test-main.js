@@ -16,17 +16,18 @@ var paths = {
     // third party libraries
     backbone: '/base/src/vendor/backbone/backbone',
     marionette: '/base/src/vendor/marionette/lib/backbone.marionette',
-    handlebars: '/base/src/vendor/script/handlebars/handlebars.amd',
+    handlebars: '/base/src/vendor/handlebars/handlebars.amd',
     jquery: '/base/src/vendor/jquery/dist/jquery',
     underscore: '/base/src/vendor/underscore/underscore',
 
-    // handlebar templates base location
-    templates: '/base/src/templates',
-
     // scripts
-    base: '/base/src/scripts/base',
-    components: '/base/src/scripts/components',
-    features: '/base/src/scripts/features'
+    base: '/base/scripts/base',
+    browseGrid: '/base/scripts/features/browseGrid',
+    facetedSidebar: '/base/scripts/features/facetedSidebar',
+
+    // templates
+    'browseGrid.templates': '/base/templates/features/browseGrid',
+    'facetedSidebar.templates': '/base/templates/features/facetedSidebar'
 
 };
 

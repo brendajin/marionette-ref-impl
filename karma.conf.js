@@ -21,6 +21,9 @@ module.exports = function ( config ) {
                 pattern: 'src/**/*.js',
                 included: false
             }, {
+                pattern: 'target/templates/**/*.js',
+                included: false
+            }, {
                 pattern: 'test/spec/**',
                 included: false
             },

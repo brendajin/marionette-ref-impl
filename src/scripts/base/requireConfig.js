@@ -6,19 +6,19 @@
         // third party libraries
         backbone: '/vendor/backbone/backbone',
         marionette: '/vendor/marionette/lib/backbone.marionette',
-        handlebars: '/vendor/script/handlebars/handlebars.amd',
+        handlebars: '/vendor/handlebars/handlebars.amd',
         jquery: '/vendor/jquery/dist/jquery',
         require: '/vendor/requirejs/require',
         underscore: '/vendor/underscore/underscore',
 
-        // handlebar templates base location
-        templates: '/templates',
-
         // scripts
         base: '/scripts/base',
-        components: '/scripts/components',
-        features: '/scripts/features'
+        browseGrid: '/scripts/features/browseGrid',
+        facetedSidebar: '/scripts/features/facetedSidebar',
 
+        // templates
+        'browseGrid.templates': '/templates/features/browseGrid',
+        'facetedSidebar.templates': '/templates/features/facetedSidebar'
     };
 
     var shims = {

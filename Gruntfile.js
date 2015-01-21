@@ -1,4 +1,37 @@
+function gruntSupportCode( grunt ) {
+
+    var outExt = "js",
+        target = "target";
+
+    grunt.util.linefeed = '\n';
+
+    function getFileMap( baseDir, ext ) {
+        var sources = {},
+            key;
+
+        if ( !grunt.file.exists( target ) ) {
+            grunt.file.mkdir( target );
+        }
+
+        grunt.file.recurse( baseDir, function ( abspath, rootdir, subdir, filename ) {
+            if ( filename.substring( filename.length - ext.length ) === ext ) {
+                key = abspath.replace( ext, outExt ).replace( "src", target );
+                sources[ key ] = abspath;
+            }
+        } );
+
+        return sources;
+    }
+
+    return {
+        getFileMap: getFileMap
+    };
+}
+
 module.exports = function ( grunt ) {
+
+    var gruntSupport = gruntSupportCode( grunt );
+
     // must do this this way as beautified could be undefined and don't want to split on thats
     function getFilesToBeautify() {
         var i, result = [],
@@ -61,6 +94,15 @@ module.exports = function ( grunt ) {
             options: {
                 mode: true
             }
+        },
+        handlebars: {
+            compile: {
+                files: gruntSupport.getFileMap( 'src/templates', 'hbs' )
+            },
+            options: {
+                namespace: false,
+                amd: true
+            }
         }
     } );
 
@@ -68,6 +110,7 @@ module.exports = function ( grunt ) {
     grunt.loadNpmTasks( 'grunt-jsbeautifier' );
     grunt.loadNpmTasks( 'grunt-contrib-clean' );
     grunt.loadNpmTasks( 'grunt-contrib-copy' );
+    grunt.loadNpmTasks( 'grunt-contrib-handlebars' );
 
     // Post npm install task, to setup the pre-commit hook
     grunt.registerTask(
