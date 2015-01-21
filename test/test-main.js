@@ -21,13 +21,13 @@ var paths = {
     underscore: '/base/src/vendor/underscore/underscore',
 
     // scripts
-    base: '/base/scripts/base',
-    browseGrid: '/base/scripts/features/browseGrid',
-    facetedSidebar: '/base/scripts/features/facetedSidebar',
+    base: '/base/src/scripts/base',
+    browseGrid: '/base/src/scripts/features/browseGrid',
+    facetedSidebar: '/base/src/scripts/features/facetedSidebar',
 
     // templates
-    'browseGrid.templates': '/base/templates/features/browseGrid',
-    'facetedSidebar.templates': '/base/templates/features/facetedSidebar'
+    'browseGrid.templates': '/base/target/templates/features/browseGrid',
+    'facetedSidebar.templates': '/base/target/templates/features/facetedSidebar'
 
 };
 
