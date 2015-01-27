@@ -1,16 +1,14 @@
-/*define( [ 'base/application', 'marionette' ], function ( Application, Marionette ) {
+define( [ 'base/application', 'marionette' ], function ( Application, Marionette ) {
 
     'use strict';
 
     describe( 'Application', function () {
-        var application;
-
         loadFixtures( 'application.html' );
+
+        var application = new Application();
 
         it( 'should be a Marionette.Application', function () {
             expect( typeof Application ).toEqual( 'function' );
-
-            application = new Application();
             expect( application instanceof Marionette.Application ).toEqual( true );
         } );
 
@@ -24,4 +22,3 @@
         } );
     } );
 } );
-*/
