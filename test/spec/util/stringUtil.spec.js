@@ -1,8 +1,8 @@
-define( [ 'util/stringUtil' ], function ( stringUtil ) {
+describe( 'StringUtil', function () {
 
     'use strict';
 
-    describe( 'StringUtil', function () {
+    define( [ 'util/stringUtil' ], function ( stringUtil ) {
 
         describe( "truncate", function () {
             it( "should be a method", function () {
@@ -69,7 +69,6 @@ define( [ 'util/stringUtil' ], function ( stringUtil ) {
         it( "StringUtil js should have a public api with following method isEmptyString", function () {
             expect( typeof stringUtil.isEmptyString ).toEqual( "function" );
         } );
-
 
         describe( "Testcase", function () {
 
@@ -158,7 +157,6 @@ define( [ 'util/stringUtil' ], function ( stringUtil ) {
 
             } );
 
-
         } );
 
         describe( 'getURLParameterFromHash method', function () {
@@ -211,51 +209,3 @@ define( [ 'util/stringUtil' ], function ( stringUtil ) {
         } );
     } );
 } );
-
-/*describe( 'StringUtil polyfills', function () {
-    describe( 'trim', function () {
-        String.prototype.trim = undefined;
-
-        beforeEach( function () {
-            var _this = this;
-            // console.log( "beforeEach" );
-            var flag = false;
-            require( [ "stringUtil" ], function ( stringUtil ) {
-                // console.log( 'shortendesc required' );
-                _stringUtil = stringUtil;
-                flag = true;
-            } );
-
-            waitsFor( function () {
-                return flag;
-            } );
-        } );
-
-        it( 'should include a polyfill that makes sure that String.prototype has a trim method', function () {
-            expect( String.prototype.trim ).toBeDefined();
-        } );
-
-        it( 'should trim leading space', function () {
-            expect( ' leading space'.trim() ).toEqual( 'leading space' );
-            expect( '       leading space'.trim() ).toEqual( 'leading space' );
-        } );
-
-        it( 'should trim trailing space', function () {
-            expect( 'trailing space '.trim() ).toEqual( 'trailing space' );
-            expect( 'trailing space       '.trim() ).toEqual( 'trailing space' );
-        } );
-
-        it( 'should trim leading tab', function () {
-            expect( '\tleading tab'.trim() ).toEqual( 'leading tab' );
-            expect( '\t\tleading tab'.trim() ).toEqual( 'leading tab' );
-        } );
-
-        it( 'should trim trailing tab', function () {
-            expect( 'trailing tab\t'.trim() ).toEqual( 'trailing tab' );
-            expect( 'trailing tab\t\t'.trim() ).toEqual( 'trailing tab' );
-        } );
-
-
-    } );
-} );
-*/
