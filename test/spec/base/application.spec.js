@@ -1,4 +1,4 @@
-define( [ 'base/application', 'marionette' ], function ( Application, Marionette ) {
+/*define( [ 'base/application', 'marionette' ], function ( Application, Marionette ) {
 
     'use strict';
 
@@ -24,3 +24,4 @@ define( [ 'base/application', 'marionette' ], function ( Application, Marionette
         } );
     } );
 } );
+*/

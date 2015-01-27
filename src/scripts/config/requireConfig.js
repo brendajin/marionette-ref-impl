@@ -16,6 +16,7 @@
 
         // scripts
         base: 'scripts/base',
+        util: 'scripts/util',
         browseGrid: 'scripts/features/browseGrid',
         facetedSidebar: 'scripts/features/facetedSidebar',
 

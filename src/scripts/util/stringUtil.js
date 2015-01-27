@@ -14,9 +14,9 @@ define( [], function () {
             str = text;
         } else {
             for ( var i = maxChar; i > minChar; i-- ) {
-                if ( text.charAt( i - 1 ) == ',' ) {
+                if ( text.charAt( i - 1 ) === ',' ) {
                     str = text.substring( 0, i - 1 ) + _addon;
-                } else if ( text.charAt( i ) == ' ' ) {
+                } else if ( text.charAt( i ) === ' ' ) {
                     str = text.substring( 0, i ) + _addon;
                 }
             }
@@ -45,7 +45,7 @@ define( [], function () {
     };
 
     var vPostCode = function ( str, country ) {
-        var country = country || 'US';
+        country = country || 'US';
         switch ( country.toUpperCase() ) {
             default: return /(^\d{5}$)|(^\d{5}-\d{4}$)/.test( str );
         }
@@ -64,7 +64,7 @@ define( [], function () {
     //+ boolean true/false depending on outcome of analyzing str
     var isEmpty = function ( str ) {
         if ( str ) {
-            return ( ( str === null ) || str.length == 0 || /^\s+$/.test( str ) );
+            return ( ( str === null ) || str.length === 0 || /^\s+$/.test( str ) );
         } else {
             return true;
         }
