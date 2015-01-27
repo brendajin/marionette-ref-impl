@@ -2,9 +2,6 @@
 
     'use strict';
 
-    window.baseUrlSrc = window.baseUrlSrc || '/';
-    window.baseUrlTarget = window.baseUrlTarget || '/';
-
     var paths = {
         // third party libraries
         backbone: 'vendor/backbone/backbone',

@@ -1,3 +1,6 @@
+window.baseUrlSrc = '/';
+window.baseUrlTarget = '/';
+
 window.requireConfigCallback = function () {
 
     'use strict';
