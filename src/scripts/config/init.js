@@ -7,5 +7,6 @@ window.requireConfigCallback = function () {
 
     require( [ 'base/application' ], function ( Application ) {
         var app = new Application();
+        app.start();
     } );
 };
