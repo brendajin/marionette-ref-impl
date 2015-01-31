@@ -21,8 +21,8 @@ define( [ 'backbone', 'marionette', 'base/mainApp' ], function ( Backbone, Mario
             expect( Object.keys( mainApp.rootView.regions ) ).toContain( 'content' );
         } );
 
-        it( 'should be startable', function () {
-            expect( typeof mainApp.start ).toEqual( 'function' );
+        it( 'should start', function () {
+            expect( typeof mainApp.onStart ).toEqual( 'function' );
 
             spyOn( mainApp.browseGridApp, 'start' );
             spyOn( mainApp.facetedSidebarApp, 'start' );
