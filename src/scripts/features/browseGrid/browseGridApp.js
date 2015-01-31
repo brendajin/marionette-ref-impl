@@ -1,13 +1,13 @@
-//#MODULE - Browse Grid Feature
+//#MODULE - Browse Grid Application
 //> Author: Tiago Garcia
 //> Create Date: Jan 19, 2015
 //
-//##DESCRIPTION: The feature for Browse Grid
+//##DESCRIPTION: The application for Browse Grid
 define( [ 'jquery', 'underscore', 'backbone', 'marionette', 'browseGrid/browseGridView' ], function ( $, _, Backbone, Marionette, BrowseGridView ) {
 
     'use strict';
 
-    var BrowseGridFeature = Marionette.Object.extend( {
+    var BrowseGridApp = Marionette.Application.extend( {
         initialize: function ( options ) {
             _.extend( this, options );
         },
@@ -17,6 +17,6 @@ define( [ 'jquery', 'underscore', 'backbone', 'marionette', 'browseGrid/browseGr
         }
     } );
 
-    return BrowseGridFeature;
+    return BrowseGridApp;
 
 } );

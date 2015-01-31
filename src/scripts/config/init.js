@@ -5,8 +5,8 @@ window.requireConfigCallback = function () {
 
     'use strict';
 
-    require( [ 'base/application' ], function ( Application ) {
-        var app = new Application();
-        app.start();
+    require( [ 'base/mainApp' ], function ( MainApp ) {
+        var mainApp = new MainApp();
+        mainApp.start();
     } );
 };
